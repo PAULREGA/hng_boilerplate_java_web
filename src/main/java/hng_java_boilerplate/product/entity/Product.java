@@ -16,6 +16,8 @@ public class Product {
 
     private String name;
     private String description;
+    private double price;
+    private String category;
 
     @ManyToOne
     @JsonIgnore
@@ -52,5 +54,20 @@ public class Product {
 
     public void setUser(User user) {
         this.user = user;
+    }
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
     }
 }
