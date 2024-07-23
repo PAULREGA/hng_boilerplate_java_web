@@ -1,39 +1,18 @@
 package hng_java_boilerplate.product.dto;
 
+import jakarta.persistence.Column;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
 public class ProductDTO {
+    private String id;
     private String name;
-    private float price; // Make sure this is a float
+    private String description;
     private String category;
-
-    public ProductDTO(String name, float price, String category) {
-        this.name = name;
-        this.price = price;
-        this.category = category;
-    }
-
-    // Getters and Setters
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public float getPrice() {
-        return price;
-    }
-
-    public void setPrice(float price) {
-        this.price = price;
-    }
-
-    public String getCategory() {
-        return category;
-    }
-
-    public void setCategory(String category) {
-        this.category = category;
-    }
+    private double price;
+    private String imageUrl;
 }
